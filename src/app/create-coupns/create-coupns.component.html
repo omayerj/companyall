@@ -1,3 +1,56 @@
-<p>
-  create-coupns works!
-</p>
+<form class="ui form">
+    <h4 class="ui dividing header">Coupon Details</h4>
+    <div class="field">
+        <label>Title</label>
+        <div class="field">
+            <input type="text" name="title" [(ngModel)]="this.Coupon.title">
+        </div>
+    </div>
+    <div class="field">
+        <label>message</label>
+        <div class="field">
+            <textarea name="Coupon[message]" rows="2" [(ngModel)]="this.Coupon.message"></textarea>
+        </div>
+    </div>
+    <div class="field">
+        <div class="two fields">
+            <div class="field">
+                <label>Price</label>
+                <input type="number" name="Coupon[price]" [(ngModel)]="this.Coupon.price">
+            </div>
+
+            <div class="field">
+                <label>Amount</label>
+                <input type="number" name="Coupon[amount]" [(ngModel)]="this.Coupon.amount">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label>Type</label>
+        <select class="ui fluid search dropdown" [(ngModel)]="this.Coupon.type" name="Coupon[Type]">
+            <option value="">Type</option>
+            <option value="SPORTS">SPORTS</option>
+            <option value="FOOD">FOOD</option>
+            <option value="HEALTH">HEALTH</option>
+            <option value="RESTURANS">RESTURANS</option>
+            <option value="ELECTRICTY">ELECTRICTY</option>
+            <option value="CAMPING">CAMPING</option>
+            <option value="TRAVELLING">TRAVELLING</option>
+
+        </select>
+    </div>
+    <h4 class="ui dividing header">Date Information</h4>
+    <div class="fields">
+        <div class="six wide field">
+            <label>Start Date</label>
+            <div class="field">
+                <input type="date" name="Coupon[price]" [(ngModel)]="this.Coupon.startDate">
+            </div>
+        </div>
+        <div class="six wide field">
+            <label>End Date</label>
+            <input type="date" name="Coupon[price]" [(ngModel)]="this.Coupon.endDate">
+        </div>
+    </div>
+    <div class="ui button" tabindex="0" (click)="createCoupon($event)">Create</div>
+</form>

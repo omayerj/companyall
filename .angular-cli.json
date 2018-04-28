@@ -19,9 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/semantic-ui-css/semantic.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/semantic-ui-css/semantic.js",
+        "../node_modules/jquery/src/jquery.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

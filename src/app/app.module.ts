@@ -61,6 +61,10 @@ import { WebapiService } from './server/webapi.service';
             path: 'coupns',
             component: CoupnsComponent
           },
+          {
+            path: '',
+            component: MainComponent
+          }
         ]
       }
     ])

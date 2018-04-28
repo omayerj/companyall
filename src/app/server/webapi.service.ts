@@ -23,5 +23,15 @@ export class WebapiService {
   getcoupons(){
     return this.http.get(this.rootUrl+'api/companyres/getcoupons').map(res => res.json());
    }
+  getCompany(){
+    return this.http.get(this.rootUrl+'api/companyres/Company').map(res => res.json());
+   }
+   getMaxPriceFromCopany(MaxPrice){
+    return this.http.get(this.rootUrl+'api/companyres/less?MaxPrice='+MaxPrice).map(res => res.json());
+   }
+
+   createCoupon(Coupon){
+    return this.http.post(this.rootUrl+'api/companyres/createCoupon',Coupon).map(res => res.json());
+   }
 
 }

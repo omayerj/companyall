@@ -1,18 +1,70 @@
-<p>
-  coupns works!
-</p>
-<h1>{{maxPrice}}</h1>
-<!-- <form>
-  <div>
-    <label for "maxPrice">price :</label>
-    </br>
-    <input type="number" [(ngModel)]="maxPrice" name="maxPrice">
+<h1>
+  coupons</h1>
+<div class="ui middle aligned divided list">
+  <div class="item" *ngFor="let coupon of Coupons">
+    <div class="right floated content">
+      <div class="ui button" (click)="UpdateButton($event)">Update</div>
+    </div>
+    <div class="right floated content">
+      <div class="ui button" (click)="RemoveButton($event)">Remove</div>
+    </div>
+    <div class="ui big horizontal divided list">
+      <!-- <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.id}}</div>
+        </div>
+      </div> -->
+      <!--  -->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.title}}</div>
+        </div>
+      </div>
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.message}}</div>
+        </div>
+      </div>
+      <!-- end -->
+          <!--begin-->
+          <div class="item">
+              <div class="content">
+                <div class="header"> {{coupon.startDate}}</div>
+              </div>
+            </div>
+            <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.endDate}}</div>
+        </div>
+      </div>
+      <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.amount}}</div>
+        </div>
+      </div>
+      <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.price}}</div>
+        </div>
+      </div>
+      <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.type}}</div>
+        </div>
+      </div>
+      <!-- end -->
+
+    </div>
   </div>
-</form> -->
-
-<h1>Posts</h1>
-<div *ngFor="let post of posts">
-  <h4>{{post.title}}</h4>
-
-
 </div>
+
+
