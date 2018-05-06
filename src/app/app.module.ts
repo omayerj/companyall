@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DecimalPipe } from '@angular/common';
 // import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { appRoutes } from './routes';
 
 
 
@@ -40,34 +41,7 @@ import { WebapiService } from './server/webapi.service';
     StorageServiceModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'Company',
-        // component: MainComponent,
-        children: [
-          {
-            path: 'home',
-            component: MainComponent
-          },
-          {
-            path: 'createCoupns',
-            component: CreateCoupnsComponent
-          },
-          {
-            path: 'sortCoupns',
-            component: SortCoupnsComponent
-          },
-          {
-            path: 'coupns',
-            component: CoupnsComponent
-          },
-          {
-            path: '',
-            component: MainComponent
-          }
-        ]
-      }
-    ])
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [WebapiService],
   bootstrap: [AppComponent]
