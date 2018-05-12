@@ -1,0 +1,20 @@
+<form class="ui form">
+  <h4 class="ui dividing header">Update Coupon</h4>
+  <div class="field">
+      <div class="two fields">
+          <div class="field">
+              <label>Price</label>
+              <input type="number" name="Coupon[amount]" [(ngModel)]="this.coupon.price">
+          </div>
+      </div>
+  </div>
+    <h4 class="ui dividing header">Date Information</h4>
+  <div class="fields">
+  
+      <div class="six wide field">
+          <label>End Date</label>
+          <input type="date" name="Coupon[price]" [(ngModel)]="this.coupon.endDate">
+      </div>
+  </div>
+  <div class="ui button" tabindex="0" (click)="UpdateCoupon($event)">Update</div>
+</form>

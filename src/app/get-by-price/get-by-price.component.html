@@ -1,0 +1,70 @@
+
+<form class="ui form">
+
+    <h4 class="ui dividing header">Get </h4>
+    
+    <div class="field">
+        <label>Price</label>
+        <input type="number" name="Coupon[price]" [(ngModel)]="this.price">
+    </div>
+    <div class="ui button" tabindex="0" (click)="getAll($event)">GET</div>
+    </form>
+
+
+
+
+    <div class="ui middle aligned divided list">
+            <div class="item" *ngFor="let coupon of Coupons">
+              <div class="ui big horizontal divided list">
+                <div class="item">
+                  <div class="content">
+                    <div class="header"> {{coupon.title}}</div>
+                  </div>
+                </div>
+                <!--begin-->
+                <div class="item">
+                  <div class="content">
+                    <div class="header"> {{coupon.message}}</div>
+                  </div>
+                </div>
+                <!-- end -->
+                    <!--begin-->
+                    <div class="item">
+                        <div class="content">
+                          <div class="header"> {{coupon.startDate}}</div>
+                        </div>
+                      </div>
+                      <!-- end -->
+                <!--begin-->
+                <div class="item">
+                  <div class="content">
+                    <div class="header"> {{coupon.endDate}}</div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!--begin-->
+                <div class="item">
+                  <div class="content">
+                    <div class="header"> {{coupon.amount}}</div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!--begin-->
+                <div class="item">
+                  <div class="content">
+                    <div class="header"> {{coupon.price}}</div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!--begin-->
+                <div class="item">
+                  <div class="content">
+                    <div class="header"> {{coupon.type}}</div>
+                  </div>
+                </div>
+                <!-- end -->
+          
+              </div>
+            </div>
+          </div>
+    

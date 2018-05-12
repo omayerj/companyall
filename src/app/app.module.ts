@@ -1,12 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-// import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 import { StorageServiceModule } from 'angular-webstorage-service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DecimalPipe } from '@angular/common';
-// import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { appRoutes } from './routes';
 
 
@@ -18,9 +16,12 @@ import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateCoupnsComponent } from './create-coupns/create-coupns.component';
-import { SortCoupnsComponent } from './sort-coupns/sort-coupns.component';
 import { CoupnsComponent } from './coupns/coupns.component';
 import { WebapiService } from './server/webapi.service';
+import { UpdatecoupnComponent } from './updatecoupn/updatecoupn.component';
+import { GetByEndDateComponent } from './get-by-end-date/get-by-end-date.component';
+import { GetByPriceComponent } from './get-by-price/get-by-price.component';
+import { GetByTypeComponent } from './get-by-type/get-by-type.component';
 
 
 
@@ -33,8 +34,11 @@ import { WebapiService } from './server/webapi.service';
     MainComponent,
     FooterComponent,
     CreateCoupnsComponent,
-    SortCoupnsComponent,
-    CoupnsComponent
+    CoupnsComponent,
+    UpdatecoupnComponent,
+    GetByEndDateComponent,
+    GetByPriceComponent,
+    GetByTypeComponent
   ],
   imports: [
     BrowserModule,

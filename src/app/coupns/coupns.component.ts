@@ -9,49 +9,38 @@ import { WebapiService } from '../server/webapi.service';
   styleUrls: ['./coupns.component.css']
 })
 export class CoupnsComponent implements OnInit {
-  posts: Post[];
   userClaims: any;
   Coupons: coupon[];
   maxPrice;
   constructor(private webapiService: WebapiService) { }
   ngOnInit() {
+    this.loadData();
+  }
+  UpdateButton(event, coupon) {
+    console.log("UpdateButton " + event);
+    console.log("coupon ");
+    console.log(coupon);
+    this.webapiService.changeMessage(coupon);
+  }
 
-
+  RemoveButton(event, coupon) {
+    console.log("RemoveButton " + event);
+    console.log("coupon ");
+    console.log(coupon);
+    this.webapiService.removeCoupoun(coupon).subscribe((res) => {
+    });
+    //BAD
+    setTimeout(this.loadData(), 1000);
+  }
+  loadData() {
+    console.log('loadData');
     this.webapiService.getcoupons().subscribe((coupon) => {
       console.log(coupon);
       this.Coupons = coupon;
-      coupon.map(x => {
-      x.price = x.price.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
-        return x;
-      });
-
     });
   }
-  UpdateButton(event) {
-    console.log("UpdateButton " + event);
-  }
-
-  RemoveButton(event) {
-    console.log("RemoveButton " + event);
-  }
-
-  getMaxPriceFromCopany(MaxPrice) {
-    this.webapiService.getMaxPriceFromCopany(MaxPrice).subscribe((coupon) => {
-      console.log("getMaxPriceFromCopany");
-      this.Coupons = coupon;
-
-    });;
-  }
-}
-interface Post {
-  id: number,
-  title: string,
-  body: string,
-  userId: number,
-  dia: number
 }
 export interface coupon {
-
   id: number,
   title: string,
   startDate: Date,
@@ -61,5 +50,4 @@ export interface coupon {
   message: string,
   price: string,
   image: string
-
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SortCoupnsComponent } from './sort-coupns.component';
+import { UpdatecoupnComponent } from './updatecoupn.component';
 
-describe('SortCoupnsComponent', () => {
-  let component: SortCoupnsComponent;
-  let fixture: ComponentFixture<SortCoupnsComponent>;
+describe('UpdatecoupnComponent', () => {
+  let component: UpdatecoupnComponent;
+  let fixture: ComponentFixture<UpdatecoupnComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SortCoupnsComponent ]
+      declarations: [ UpdatecoupnComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SortCoupnsComponent);
+    fixture = TestBed.createComponent(UpdatecoupnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

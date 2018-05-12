@@ -1,20 +1,15 @@
+
 <h1>
   coupons</h1>
 <div class="ui middle aligned divided list">
   <div class="item" *ngFor="let coupon of Coupons">
     <div class="right floated content">
-      <div class="ui button" (click)="UpdateButton($event)">Update</div>
+      <div class="ui button" routerLink="../Update" href="" (click)="UpdateButton($event,coupon)">Update</div>
     </div>
     <div class="right floated content">
-      <div class="ui button" (click)="RemoveButton($event)">Remove</div>
+      <div class="ui button" (click)="RemoveButton($event,coupon)">Remove</div>
     </div>
     <div class="ui big horizontal divided list">
-      <!-- <div class="item">
-        <div class="content">
-          <div class="header"> {{coupon.id}}</div>
-        </div>
-      </div> -->
-      <!--  -->
       <div class="item">
         <div class="content">
           <div class="header"> {{coupon.title}}</div>
@@ -66,5 +61,4 @@
     </div>
   </div>
 </div>
-
-
+<router-outlet ></router-outlet>
