@@ -9,11 +9,11 @@ import { WebapiService } from '../server/webapi.service';
 export class MenuComponent implements OnInit {
 
   constructor(private webapiService: WebapiService) { }
-  Company: company;
+  Customer: customer;
   ngOnInit() {
-    this.webapiService.getCompany().subscribe((company) => {
-      console.log(company);
-      this.Company = company;
+    this.webapiService.getCustomer().subscribe((customer) => {
+      console.log(customer);
+      this.Customer = customer;
       // coupon.map(x => x.price.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
 
     });
@@ -21,8 +21,8 @@ export class MenuComponent implements OnInit {
 
 }
 
-interface company {
+interface customer {
   id: number,
-  compName: string,
-  email: string
+  custName: string
+  // email: string
 }

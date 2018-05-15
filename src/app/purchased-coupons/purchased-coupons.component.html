@@ -1,0 +1,61 @@
+<p>
+  purchased-coupons works!
+</p>
+
+<h1>
+  coupons</h1>
+<div class="ui middle aligned divided list">
+  <div class="item" *ngFor="let coupon of Coupons">
+    <div class="ui big horizontal divided list">
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.title}}</div>
+        </div>
+      </div>
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.message}}</div>
+        </div>
+      </div>
+      <!-- end -->
+          <!--begin-->
+          <div class="item">
+              <div class="content">
+                <div class="header"> {{coupon.startDate}}</div>
+              </div>
+            </div>
+            <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.endDate}}</div>
+        </div>
+      </div>
+      <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.amount}}</div>
+        </div>
+      </div>
+      <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.price}}</div>
+        </div>
+      </div>
+      <!-- end -->
+      <!--begin-->
+      <div class="item">
+        <div class="content">
+          <div class="header"> {{coupon.type}}</div>
+        </div>
+      </div>
+      <!-- end -->
+
+    </div>
+  </div>
+</div>
+<router-outlet ></router-outlet>

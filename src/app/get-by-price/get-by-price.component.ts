@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebapiService } from '../server/webapi.service';
-import { coupon } from '../coupns/coupns.component';
+import { BuyCouponsComponent } from '../buy-coupons/buy-coupons.component';
 
 @Component({
   selector: 'app-get-by-price',
@@ -9,7 +9,7 @@ import { coupon } from '../coupns/coupns.component';
 })
 export class GetByPriceComponent implements OnInit {
   price: number;
-  Coupons: coupon[];
+  Coupons: BuyCouponsComponent[];
   constructor(private webapiService: WebapiService) { }
 
   ngOnInit() {

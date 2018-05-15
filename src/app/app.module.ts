@@ -15,13 +15,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MenuComponent } from './menu/menu.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
-import { CreateCoupnsComponent } from './create-coupns/create-coupns.component';
-import { CoupnsComponent } from './coupns/coupns.component';
 import { WebapiService } from './server/webapi.service';
-import { UpdatecoupnComponent } from './updatecoupn/updatecoupn.component';
-import { GetByEndDateComponent } from './get-by-end-date/get-by-end-date.component';
 import { GetByPriceComponent } from './get-by-price/get-by-price.component';
 import { GetByTypeComponent } from './get-by-type/get-by-type.component';
+import { PurchasedCouponsComponent } from './purchased-coupons/purchased-coupons.component';
+import { BuyCouponsComponent } from './buy-coupons/buy-coupons.component';
 
 
 
@@ -33,12 +31,10 @@ import { GetByTypeComponent } from './get-by-type/get-by-type.component';
     MenuComponent,
     MainComponent,
     FooterComponent,
-    CreateCoupnsComponent,
-    CoupnsComponent,
-    UpdatecoupnComponent,
-    GetByEndDateComponent,
     GetByPriceComponent,
-    GetByTypeComponent
+    GetByTypeComponent,
+    PurchasedCouponsComponent,
+    BuyCouponsComponent
   ],
   imports: [
     BrowserModule,

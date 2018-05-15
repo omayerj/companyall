@@ -21,37 +21,27 @@ export class WebapiService {
   // getPost() {
   //   return this.http.get('https://jsonplaceholder.typicode.com/posts').map(res => res.json());
   // }
-  getcoupons() {
-    return this.http.get(this.rootUrl + 'api/companyres/getcoupons').map(res => res.json());
+  getAllPurchasedCoupons() {
+    return this.http.get(this.rootUrl + '/api/customerRes/getAllPurchasedCoupons').map(res => res.json());
   }
-  getCompany() {
-    return this.http.get(this.rootUrl + 'api/companyres/Company').map(res => res.json());
+  getcoupons() {
+    return this.http.get(this.rootUrl + '/api/customerRes/getCoupon').map(res => res.json());
+  }
+  getCustomer() {
+    return this.http.get(this.rootUrl + 'api/customerRes/customer').map(res => res.json());
   }
   getMaxPriceFromCopany(MaxPrice) {
-    return this.http.get(this.rootUrl + 'api/companyres/less?MaxPrice=' + MaxPrice).map(res => res.json());
-  }
-  getByEndDate(EndDate) {
-    return this.http.get(this.rootUrl + 'api/companyresGet/?getCouponByEndDate=' + EndDate).map(res => res.json());
+    return this.http.get(this.rootUrl + 'api/customerRes/getAllPurchasedCouponsByPrice?Price=' + MaxPrice).map(res => res.json());
   }
   getByType(Type) {
-    return this.http.get(this.rootUrl + 'api/companyres/?getCouponByType='+Type).map(res => res.json());
+    return this.http.get(this.rootUrl + '/api/customerRes/getAllPurchasedCouponsByType?Type='+Type).map(res => res.json());
   }
 
-  createCoupon(Coupon) {
-    return this.http.post(this.rootUrl + 'api/companyres/createCoupon', Coupon).map(res => res.json());
+  purchaseCoupon(Coupon) {
+    return this.http.post(this.rootUrl + 'api/customerRes/purchaseCoupon', Coupon).map(res => res.json());
   }
   logout() {
     return this.http.post(this.rootUrl + 'api/logout', null).map(res => res.json());
-  }
-  removeCoupoun(Coupon) {
-    console.log('removeCoupoun');
-    console.log(Coupon);
-    return this.http.post(this.rootUrl + 'api/companyres/removeCoupoun', Coupon).map(res => res.json());
-  }
-  updateCoupon(Coupon) {
-    console.log('removeCoupoun');
-    console.log(Coupon);
-    return this.http.put(this.rootUrl + 'api/companyres/updateCoupon', Coupon).map(res => res.json());
   }
   changeMessage(message) {
     this.messageSource.next(message)
